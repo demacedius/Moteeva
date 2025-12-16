@@ -3,7 +3,7 @@
 	import Icon from '@iconify/svelte';
 </script>
 
-<footer class="bg-[#100601] text-white relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+<footer class="bg-[#100601] text-white relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen overflow-hidden">
 	<div class="container mx-auto pt-7 px-8 lg:pt-12 lg:max-w-6xl lg:px-8">
 		<div>
 			<h3

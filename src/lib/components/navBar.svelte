@@ -4,7 +4,7 @@
 </script>
 
 <nav
-    class="w-full h-[73px] min-w-[393px] flex items-center justify-center lg:justify-between "
+    class="w-full h-[73px] flex items-center justify-center lg:justify-between "
 >
     <img src={Logo} alt="" class="" />
     <div class="hidden w-full lg:flex lg:items-center lg:justify-between lg:ml-[281px] ">

@@ -102,7 +102,7 @@
     </div>
 
     <!-- Desktop: disposition avec lignes pointillées -->
-    <div class="hidden lg:block relative mt-8 mb-20 mx-auto" style="width: 1400px; height: 700px;">
+    <div class="hidden lg:block relative mt-8 mb-20 mx-auto max-w-[1400px] w-full" style="height: 700px;">
         <!-- Logo central dans carré blanc (z-index le plus élevé) -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
             <div class="relative flex items-center justify-center rotate-[0.731deg]">

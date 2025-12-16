@@ -57,7 +57,7 @@
 </script>
 
 <section
-    class="bg-[#F9FAFB] pt-[38px] mt-8 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen"
+    class="bg-[#F9FAFB] pt-[38px] mt-8 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen overflow-hidden"
 >
     <div class="flex flex-col items-center px-8 max-w-[1620px] mx-auto">
         <div class="flex flex-col lg:flex-row lg:gap-[103px] lg:mb-[185px]">

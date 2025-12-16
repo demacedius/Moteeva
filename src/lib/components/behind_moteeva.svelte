@@ -54,17 +54,19 @@
 
     <!-- Mobile version -->
     <div class="lg:hidden">
-        <div class="h-[551.86px] w-[336.09px] relative overflow-visible">
-            <img
-            src={back}
-            alt=""
-            class="absolute w-full h-full top-0 left-0 z-0"
-            />
-            <img
-            src={front}
-            alt=""
-            class="absolute w-[115%] h-auto max-w-none top-8 -left-6 z-10"
-            />
+        <div class="flex justify-center">
+            <div class="h-[551.86px] w-[336.09px] relative overflow-visible">
+                <img
+                src={back}
+                alt=""
+                class="absolute w-full h-full top-0 left-0 z-0"
+                />
+                <img
+                src={front}
+                alt=""
+                class="absolute w-[115%] h-auto max-w-none top-8 -left-6 z-10"
+                />
+            </div>
         </div>
 
         <div class="flex flex-col gap-7 mt-11 w-full">
@@ -113,14 +115,16 @@
 
     <!-- Mobile version -->
     <div class="mt-[41px] mb-6 lg:hidden">
-        <div class="flex gap-3">
-            <div class="relative h-[263px] w-[167px] overflow-visible">
-                <img src={tristant_back} alt="" class="absolute" />
-                <img src={tristan_front} alt="" class="absolute -top-6" />
-            </div>
-            <div class="relative h-[263px] w-[167px] overflow-visible">
-                <img src={moi_back} alt="" class="absolute" />
-                <img src={moi_front} alt="" class="absolute -top-6" />
+        <div class="flex justify-center">
+            <div class="flex gap-3">
+                <div class="relative h-[263px] w-[167px] overflow-visible">
+                    <img src={tristant_back} alt="" class="absolute" />
+                    <img src={tristan_front} alt="" class="absolute -top-6" />
+                </div>
+                <div class="relative h-[263px] w-[167px] overflow-visible">
+                    <img src={moi_back} alt="" class="absolute" />
+                    <img src={moi_front} alt="" class="absolute -top-6" />
+                </div>
             </div>
         </div>
         <div class="flex flex-col gap-7 mt-11 w-full">
@@ -170,7 +174,7 @@
         Un merci particulier à Cécile pour son aide et son soutien
     </p>
     <div
-        class="w-[361px] bg-[#F25E18] rounded-3xl border border-white pb-[18px] lg:w-full lg:max-w-5xl lg:pb-12"
+        class="max-w-[361px] w-full bg-[#F25E18] rounded-3xl border border-white pb-[18px] lg:max-w-5xl lg:pb-12"
     >
             <h4 class="pt-[18px] px-[18px] font-archivo font-semibold leading-[120%] tracking-[-1px] text-4xl text-center text-white lg:text-5xl lg:px-16 lg:pt-12">
                 Merci d'être là, et surtout, merci de croire en ce projet autant

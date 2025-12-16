@@ -8,7 +8,7 @@
     import Footer from "$lib/components/footer.svelte";
 </script>
 
-<main class="md:max-w-[1620px] mx-auto px-[21px] bg-white">
+<main class="md:max-w-[1620px] mx-auto px-[21px] bg-white overflow-x-hidden">
     <NavBar/>
     <div id="accueil">
         <Header/>
