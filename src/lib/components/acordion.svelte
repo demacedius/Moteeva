@@ -10,14 +10,14 @@
       }
   </script>
 
-  <div class="border border-[#E4E5E7] rounded-lg   overflow-hidden">
+  <div class="border border-[#E4E5E7] rounded-lg overflow-hidden max-w-full">
       <!-- Header cliquable -->
       <button
           on:click={toggle}
           class="w-full bg-white flex pl-5 py-2.5 pr-2.5 items-center justify-between gap-6.5"
       >
-          <div class="flex items-center gap-6.5">
-              <h3 class="font-archivo text-2xl text-left  font-bold leading-[110%] tracking-[-2%]">{title}</h3>
+          <div class="flex items-center gap-6.5 flex-1 min-w-0">
+              <h3 class="font-archivo text-2xl text-left font-bold leading-[110%] tracking-[-2%] wrap-break-word">{title}</h3>
           </div>
           <!-- Icône qui tourne -->
           <svg

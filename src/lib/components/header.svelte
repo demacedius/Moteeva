@@ -6,7 +6,7 @@
 </script>
 
 <div
-    class="border-2 border-[#F25E18] rounded-[34px] w-full flex flex-col pb-7 pt-[26px] lg:relative lg:mt-[116px] lg:h-[554px]"
+    class="border-2 border-[#F25E18] rounded-[34px] w-full max-w-full flex flex-col pb-7 pt-[26px] lg:relative lg:mt-[116px] lg:h-[554px]"
 >
     <div
         class="max-lg:hidden lg:absolute lg:inset-0 lg:rounded-[34px] lg:overflow-hidden"
@@ -27,7 +27,7 @@
         class="relative z-10 flex flex-col items-center px-4 lg:items-start lg:w-1/2 lg:ml-40  lg:mt-[140px] "
     >
         <h1
-            class="font-semibold text-[37px] leading-[122%] font-archivo text-left lg:mb-5"
+            class="font-semibold text-[37px] leading-[122%] font-archivo text-left lg:mb-5 max-w-full"
         >
             Et si trouver un partenaire pour<br class="lg:hidden" /> faire du
             sport
