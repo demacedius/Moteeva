@@ -4,47 +4,39 @@
     const questions = [
   {
     "title": "Comment fonctionne Moteeva ?",
-    "content": "Moteeva permet de trouver ou créer des sessions sportives autour de chez vous. Vous rejoignez un lieu près de chez vous et rencontrez des sportifs selon votre niveau partagé dans l'annonce. Vous pouvez aussi inviter vos amis sur une annonce et voir les annonces proches pour partager votre passion du sport dans une ambiance conviviale."
+    "content": "Moteeva permet de créer ou rejoindre des sessions sportives près de chez toi selon le sport, le niveau, le lieu et le type de session. Tu pratiques avec d'autres personnes, simplement et en confiance."
   },
   {
     "title": "L'application est-elle gratuite ?",
-    "content": "Oui, Moteeva est gratuite dans sa version de base. Pour les organisateurs, des options avancées (gestion des niveaux, sécurité...) seront affichées, afin d'optimiser la création et le suivi des sessions. Une partie de ces fonctionnalités deviennent disponibles pour ceux qui souhaitent supporter le projet par l'achat de fonctionnalités additionnelles — toujours dans une mesure à l'accessibilité."
-  },
-  {
-    "title": "Comment êtes-vous assurés de la sécurité ?",
-    "content": "Oui, Moteeva est gratuite dans sa version de base. Pour soutenir le projet, des publicités légères et non intrusives seront affichées, afin de ne pas gêner votre expérience. Une offre premium légère est également disponible pour ceux qui souhaitent supprimer les pubs et profiter de fonctionnalités exclusives — toujours dans la mesure de l'accessibilité."
+    "content": "Oui ! Moteeva est gratuite pour découvrir et rejoindre des sessions. Un abonnement optionnel permet ensuite de rejoindre plus de sessions et de supprimer les publicités."
   },
   {
     "title": "Quels sports sont disponibles ?",
-    "content": "Notre objectif est simple : rassembler tous les sports possibles et imaginables sur Moteeva ! Des sports collectifs aux sports individuels, des raquettes, d’endurance, de glisse, de combat, ou encore de précision, la limite ne cesse de s’agrandir selon les retours de la communauté."
+    "content": "L'objectif est de proposer tous les sports possibles et imaginables, des plus populaires aux plus confidentiels, en intérieur comme en extérieur."
   },
   {
-    "title": "Comment le niveau sportif est-il déterminé ?",
-    "content": "Lors de l'inscription, vous choisissez votre niveau de pratique (débutant, intermédiaire, confirmé). Ce niveau pourra être ajusté automatiquement en fonction de vos participations et des retours des autres utilisateurs, pour garantir des sessions équitables et agréables."
+    "title": "Comment le niveau sportif est-il pris en compte ?",
+    "content": "Chaque utilisateur renseigne son niveau et peut être évalué après les sessions. Cela permet de proposer des sessions plus équilibrées et adaptées à chacun(e)."
   },
   {
-    "title": "Puis-je organiser des événements en groupe ?",
-    "content": "Oui, bien sûr ! Vous pouvez créer vos propres sessions et inviter vos amis ou rendre la session publique pour rencontrer de nouveaux sportifs. À terme, il sera aussi possible d’organiser des grands événements communautaires (tournois, courses, challenges...) directement depuis l’application."
+    "title": "Puis-je organiser des sessions ou événements ?",
+    "content": "Oui ! Tu peux créer des sessions publiques ou privées, inviter tes ami(e)s ou ouvrir la session à la communauté selon tes envies."
   },
   {
-    "title": "L’application fonctionne-t-elle dans ma région ?",
-    "content": "Oui ! Moteeva est conçu pour fonctionner partout en France. Même si la communauté se construit progressivement, vous pouvez déjà publier vos sessions — plus vous serez nombreux à le faire, plus votre région deviendra dynamique et active."
-  },
-  {
-    "title": "Que faire si mon partenaire ne se présente pas ?",
-    "content": "Si un participant ne vient pas à la session, vous pouvez laisser un avis pour le signaler et aider à maintenir une communauté fiable. Ces avis influencent la notation des profils afin de favoriser les utilisateurs sérieux et réguliers."
+    "title": "Que se passe-t-il si un(e) participant(e) ne se présente pas ?",
+    "content": "Après chaque session, tu peux laisser un avis. Les absences répétées peuvent impacter la visibilité et la fiabilité d'un profil, voire aboutir à un bannissement."
   },
   {
     "title": "Puis-je découvrir de nouveaux sports ?",
-    "content": "Oui ! Grâce à l’onglet Découverte, vous pourrez explorer de nouveaux sports, participer à des initiations ou rejoindre des sessions atypiques près de chez vous."
+    "content": "Oui ! Moteeva encourage la découverte de nouvelles pratiques, grâce à des sessions ouvertes aux débutant(e)s ou des sessions d'initiation."
   },
   {
-    "title": "Puis-je noter mes partenaires après une session ?",
-    "content": "Oui, après chaque session, vous pourrez laisser un avis sur vos partenaires ou l'organisateur. Ces retours aident à construire une communauté de confiance et à valoriser les meilleurs profils."
+    "title": "Moteeva fonctionne-t-elle dans ma région ?",
+    "content": "Oui ! L'application est pensée pour fonctionner dans toute la France."
   },
   {
-    "title": "Y aura-t-il des classements ou des récompenses ?",
-    "content": "Oui ! Moteeva inclut un système de points et de badges pour les utilisateurs les plus actifs. Participez à des sessions, découvrez de nouveaux sports ou organisez des événements pour grimper dans les classements régionaux !"
+    "title": "Puis-je noter les autres participants après une session ?",
+    "content": "Oui. Les avis permettent de renforcer la confiance, la sécurité et la qualité des rencontres sportives."
   }
 ]
 

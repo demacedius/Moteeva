@@ -12,7 +12,7 @@
         {
             title: "Qui suis-je ?",
             content:
-                "Bonjour, je m'appelle <span class=\"text-[#FF6933]\">Téva Philippon</span>, j'ai 20 ans et je suis actuellement en alternance dans une école pour devenir Entrepreneur. Comme vous l'avez sûrement deviné, je suis passionné de sport…  Mais je déteste être seul !",
+                "Bonjour, je m'appelle <span class=\"text-[#FF6933]\">Téva Philippon</span>, j'ai 20 ans et je suis actuellement en alternance au <a href=\"https://www.campusdesentrepreneurs.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#FF6933] underline hover:text-[#e54e0f] transition-colors\">Campus des Entrepreneurs</a>. Comme vous l'avez sûrement deviné, je suis passionné de sport… Mais je déteste être seul !",
         },
         {
             title: "Le Sport dans ma vie.",
@@ -116,14 +116,14 @@
     <!-- Mobile version -->
     <div class="mt-[41px] mb-6 lg:hidden">
         <div class="flex justify-center">
-            <div class="flex gap-3">
-                <div class="relative h-[263px] w-[167px] overflow-visible">
-                    <img src={tristant_back} alt="" class="absolute" />
-                    <img src={tristan_front} alt="" class="absolute -top-6" />
+            <div class="flex gap-5">
+                <div class="relative h-[263px] w-[160px] overflow-visible">
+                    <img src={tristant_back} alt="" class="absolute w-full h-full" />
+                    <img src={tristan_front} alt="" class="absolute -top-6 w-full" />
                 </div>
-                <div class="relative h-[263px] w-[167px] overflow-visible">
-                    <img src={moi_back} alt="" class="absolute" />
-                    <img src={moi_front} alt="" class="absolute -top-6" />
+                <div class="relative h-[263px] w-[160px] overflow-visible">
+                    <img src={moi_back} alt="" class="absolute w-full h-full" />
+                    <img src={moi_front} alt="" class="absolute -top-6 w-full" />
                 </div>
             </div>
         </div>
@@ -184,7 +184,7 @@
                 La cagnotte de financement du projet est disponible ci-dessous.
                 N'importe quelle aide est la bienvenue.
             </p>
-        <button class="bg-white mx-[18px] mt-[27px] px-[66px] py-3 rounded-[10px] flex items-center justify-center gap-[10px] lg:mx-auto lg:p lg:mt-10 lg:px-20 lg:py-4 opacity-50 cursor-not-allowed" disabled>
+        <button class="bg-white mx-[18px] mt-[27px] px-[66px] py-3 rounded-[10px] flex items-center justify-center gap-[10px] lg:mx-auto lg:p lg:mt-10 lg:px-20 lg:py-4 opacity-50 cursor-not-allowed" disabled title="La campagne de dons sera ouverte prochainement">
             <img src={heart} alt="Icon en forme de coeur" class="w-6 h-6 lg:w-7 lg:h-7" />
             <p class="font-sans leading-[120%] tracking-[-2%] font-bold text-base text-[#F25F18] lg:text-lg">Soutenir le projet</p>
         </button>

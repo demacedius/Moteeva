@@ -5,6 +5,7 @@
     import Chose from "$lib/components/Why_chose_moteeva.svelte";
     import Behind from "$lib/components/behind_moteeva.svelte";
     import Faq from "$lib/components/faq.svelte";
+    import Newsletter from "$lib/components/newsletter.svelte";
     import Footer from "$lib/components/footer.svelte";
 </script>
 
@@ -25,6 +26,7 @@
     <div id="faq">
         <Faq/>
     </div>
+    <Newsletter/>
     <Footer/>
 </main>
  

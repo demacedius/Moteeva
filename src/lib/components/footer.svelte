@@ -15,11 +15,8 @@
 				<a href="#" class="text-gray-400 hover:text-white transition-colors">
 					<Icon icon="mdi:facebook" width="24" class="lg:w-7 lg:h-7" />
 				</a>
-				<a href="#" class="text-gray-400 hover:text-white transition-colors">
+				<a href="https://www.instagram.com/moteeva.app" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
 					<Icon icon="mdi:instagram" width="24" class="lg:w-7 lg:h-7" />
-				</a>
-				<a href="#" class="text-gray-400 hover:text-white transition-colors">
-					<Icon icon="mdi:youtube" width="24" class="lg:w-7 lg:h-7" />
 				</a>
 			</div>
 		</div>
@@ -30,17 +27,17 @@
 			<div class="flex flex-row items-center justify-center">
 				<ul class="space-y-2 flex gap-[9px]">
 					<li>
-						<a href="#" class="text-[#9CA3B0] font-inter font-normal text-[5px]"
+						<a href="/mentions-legales" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-[5px]"
+							>Mentions légales</a
+						>
+					</li>
+					<li>
+						<a href="/politique-confidentialite" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-[5px]"
 							>Politique de confidentialité</a
 						>
 					</li>
 					<li>
-						<a href="#" class="text-[#9CA3B0] font-inter font-normal text-[5px]"
-							>Conditions d'utilisation</a
-						>
-					</li>
-					<li>
-						<a href="#" class="text-[#9CA3B0] font-inter font-normal text-[5px]"
+						<a href="/cookies" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-[5px]"
 							>Cookies</a
 						>
 					</li>
@@ -57,17 +54,17 @@
 				</p>
 				<ul class="flex gap-8">
 					<li>
-						<a href="#" class="text-[#9CA3B0] hover:text-white transition-colors text-sm"
+						<a href="/mentions-legales" class="text-[#9CA3B0] hover:text-white transition-colors text-sm"
+							>Mentions légales</a
+						>
+					</li>
+					<li>
+						<a href="/politique-confidentialite" class="text-[#9CA3B0] hover:text-white transition-colors text-sm"
 							>Politique de confidentialité</a
 						>
 					</li>
 					<li>
-						<a href="#" class="text-[#9CA3B0] hover:text-white transition-colors text-sm"
-							>Conditions d'utilisation</a
-						>
-					</li>
-					<li>
-						<a href="#" class="text-[#9CA3B0] hover:text-white transition-colors text-sm"
+						<a href="/cookies" class="text-[#9CA3B0] hover:text-white transition-colors text-sm"
 							>Cookies</a
 						>
 					</li>
