@@ -1,6 +1,6 @@
 <script>
     import Tag from "$lib/components/tag.svelte";
-    import tennisWomen from "$lib/assets/images/teniswomen.png";
+    import phone from "$lib/assets/images/phone.png";
     import logo from "$lib/assets/images/Group 51.svg";
     import vector41 from "$lib/assets/images/Vector 41.png";
     import vector42 from "$lib/assets/images/Vector 42.png";
@@ -46,16 +46,16 @@
 
 <section class="py-[52px] font-archivo">
     <!-- Conteneur externe pour la position relative -->
-    <div class="relative max-w-6xl mx-auto lg:mt-20">
-        <!-- Image de la joueuse de tennis, en arrière-plan (z-10) -->
+    <div class="relative w-[1101px] mx-auto lg:mt-20 overflow-visible">
+        <!-- Image du téléphone, en arrière-plan (z-10) -->
         <img
-            src={tennisWomen}
-            alt="Joueuse de tennis"
-            class="hidden lg:block absolute bottom-0 right-0 h-[402px] w-auto z-30"
+            src={phone}
+            alt="Téléphone Moteeva"
+            class="hidden lg:block absolute top-[-48px] right-[26.8px] h-[430px] w-auto z-30 pointer-events-none"
         />
 
         <!-- Carte de contenu, au premier plan (z-20), avec la bordure et le fond -->
-        <div class="relative z-20 bg-slate-50 rounded-2xl border">
+        <div class="relative z-20 bg-slate-50 rounded-2xl border h-[382px] overflow-hidden">
             <div class="flex flex-col lg:flex-row lg:items-center">
                 <!-- Colonne de gauche (texte) -->
                 <div class="w-full p-8 lg:w-3/5 lg:p-12">

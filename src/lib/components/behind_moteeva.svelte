@@ -184,9 +184,9 @@
                 La cagnotte de financement du projet est disponible ci-dessous.
                 N'importe quelle aide est la bienvenue.
             </p>
-        <button class="bg-white mx-[18px] mt-[27px] px-[66px] py-3 rounded-[10px] flex items-center justify-center gap-[10px] lg:mx-auto lg:p lg:mt-10 lg:px-20 lg:py-4 opacity-50 cursor-not-allowed" disabled title="La campagne de dons sera ouverte prochainement">
+        <a href="https://gofund.me/6351004e5" target="_blank" rel="noopener noreferrer" class="bg-white mx-auto mt-[27px] px-8 py-3 rounded-[10px] flex items-center justify-center gap-[10px] w-full max-w-[346px] lg:mt-10 lg:py-4 hover:opacity-90 transition-all duration-300 ease-in-out">
             <img src={heart} alt="Icon en forme de coeur" class="w-6 h-6 lg:w-7 lg:h-7" />
-            <p class="font-sans leading-[120%] tracking-[-2%] font-bold text-base text-[#F25F18] lg:text-lg">Soutenir le projet</p>
-        </button>
+            <p class="font-sans leading-[120%] tracking-[-2%] font-bold text-base text-[#F25E18] lg:text-lg">Soutenir le projet</p>
+        </a>
     </div>
 </section>

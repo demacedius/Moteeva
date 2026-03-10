@@ -5,15 +5,23 @@
     export let num = '';
 </script>
 
-<div class="border border-gray-200 w-full max-w-full rounded-[18px] flex items-center justify-between bg-linear-180 from-[#FFFFFF] to-[#F9FAFB] gap-5 pr-5">
-    <div class="pl-[25px] flex flex-col gap-[22px] flex-1 min-w-0">
-        <div class="flex items-center gap-5 flex-wrap">
-            <p class="text-4xl font-archivo font-semibold leading-[120%]">{title}</p>
-            <img src={icon} alt="" class="w-[42px] h-[42px]"/>
+<div class="relative border border-[#E6E6E6] w-full lg:w-[339px] h-[281px] rounded-2xl p-6 overflow-hidden" style="background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);">
+    <!-- Numéro en arrière-plan en haut à droite -->
+    <div class="absolute right-[11.5px] top-0 pointer-events-none">
+        <p class="text-[150px] sm:text-[200px] font-archivo font-bold text-[#FFF5F0] leading-none select-none">{num}</p>
+    </div>
+
+    <!-- Contenu -->
+    <div class="relative z-10 flex flex-col justify-between h-full">
+        <!-- Titre + icon en haut à gauche -->
+        <div class="flex items-center gap-3">
+            <p class="text-lg sm:text-xl font-archivo font-semibold leading-[120%]">{title}</p>
+            <img src={icon} alt="" class="w-7 h-7 sm:w-8 sm:h-8"/>
         </div>
-        <p class="font-sans text-base font-normal leading-[120%] wrap-break-word">
+
+        <!-- Texte en bas à gauche -->
+        <p class="font-sans text-sm font-normal leading-[140%] text-[#22252A]">
             {text}
         </p>
     </div>
-    <p class="text-[170px] font-archivo text-[#ff69334d] leading-none shrink-0">{num}</p>
 </div>

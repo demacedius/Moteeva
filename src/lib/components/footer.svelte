@@ -7,7 +7,7 @@
 	<div class="container mx-auto pt-7 px-8 lg:pt-12 lg:max-w-6xl lg:px-8">
 		<div>
 			<h3
-				class="font-semibold font-sans text-[7.53px] leading-[120%] tracking-[2%] text-center mb-4 lg:text-sm lg:mb-6"
+				class="font-semibold font-sans text-xs leading-[120%] tracking-[2%] text-center mb-4 lg:text-sm lg:mb-6"
 			>
 				Suis-nous sur les réseaux !
 			</h3>
@@ -27,17 +27,17 @@
 			<div class="flex flex-row items-center justify-center">
 				<ul class="space-y-2 flex gap-[9px]">
 					<li>
-						<a href="/mentions-legales" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-[5px]"
+						<a href="/mentions-legales" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-xs"
 							>Mentions légales</a
 						>
 					</li>
 					<li>
-						<a href="/politique-confidentialite" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-[5px]"
+						<a href="/politique-confidentialite" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-xs"
 							>Politique de confidentialité</a
 						>
 					</li>
 					<li>
-						<a href="/cookies" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-[5px]"
+						<a href="/cookies" class="text-[#9CA3B0] hover:text-white transition-colors font-inter font-normal text-xs"
 							>Cookies</a
 						>
 					</li>
