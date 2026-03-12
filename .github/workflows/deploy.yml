@@ -34,15 +34,13 @@ jobs:
         tar --exclude='node_modules' --exclude='.git' --exclude='.DS_Store' --exclude='*.tar.gz' --exclude='.github' -czf moteeva-deploy.tar.gz . || ([ $? -eq 1 ] && exit 0 || exit $?)
 
     - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Add server to known hosts
       run: |
-        mkdir -p ~/.ssh
-        printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H 57-105796.ssh.hosting-ik.com >> ~/.ssh/known_hosts
-        # Verify key format
-        head -1 ~/.ssh/id_rsa
-        # Test SSH connection
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com "echo 'SSH connection successful'"
 
     - name: Transfer files to server
       run: |
@@ -60,5 +58,3 @@ jobs:
           pm2 save
         EOF
 
-    - name: Cleanup
-      run: rm -f ~/.ssh/id_rsa
