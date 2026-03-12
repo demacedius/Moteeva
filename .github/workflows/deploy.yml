@@ -40,15 +40,15 @@ jobs:
 
     - name: Add server to known hosts
       run: |
-        ssh-keyscan -H 57-105796.ssh.hosting-ik.com >> ~/.ssh/known_hosts
+        ssh-keyscan -p 3000 -H 57-105796.ssh.hosting-ik.com >> ~/.ssh/known_hosts
 
     - name: Transfer files to server
       run: |
-        scp moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
+        scp -P 3000 moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
 
     - name: Deploy on server
       run: |
-        ssh dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'EOF'
+        ssh -p 3000 dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'EOF'
           cd /srv/customer/apps/moteeva
           rm -rf * .[^.]* 2>/dev/null || true
           tar -xzf ~/moteeva-deploy.tar.gz
