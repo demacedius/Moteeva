@@ -36,9 +36,13 @@ jobs:
     - name: Setup SSH
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H 57-105796.ssh.hosting-ik.com >> ~/.ssh/known_hosts
+        # Verify key format
+        head -1 ~/.ssh/id_rsa
+        # Test SSH connection
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com "echo 'SSH connection successful'"
 
     - name: Transfer files to server
       run: |
