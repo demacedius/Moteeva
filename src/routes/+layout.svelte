@@ -10,12 +10,12 @@
 	<link rel="icon" href="/favicon.svg" />
 
 	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X8GBNBQDLC"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BWMR1XBMEHC"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'G-X8GBNBQDLC');
+		gtag('config', 'G-BWMR1XBMEH');
 	</script>
 </svelte:head>
 
