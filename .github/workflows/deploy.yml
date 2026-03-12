@@ -34,17 +34,20 @@ jobs:
         tar --exclude='node_modules' --exclude='.git' --exclude='.DS_Store' --exclude='*.tar.gz' --exclude='.github' -czf moteeva-deploy.tar.gz . || ([ $? -eq 1 ] && exit 0 || exit $?)
 
     - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+        chmod 600 ~/.ssh/deploy_key
+        eval "$(ssh-agent -s)"
+        ssh-add ~/.ssh/deploy_key
 
     - name: Transfer files to server
       run: |
-        scp -P 3000 -o StrictHostKeyChecking=no moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@185.125.27.88:~/
+        scp -i ~/.ssh/deploy_key -P 3000 -o StrictHostKeyChecking=no moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@185.125.27.88:~/
 
     - name: Deploy on server
       run: |
-        ssh -p 3000 -o StrictHostKeyChecking=no dS7BhMKpcsV_moteeva@185.125.27.88 << 'EOF'
+        ssh -i ~/.ssh/deploy_key -p 3000 -o StrictHostKeyChecking=no dS7BhMKpcsV_moteeva@185.125.27.88 << 'EOF'
           cd /srv/customer/apps/moteeva
           rm -rf * .[^.]* 2>/dev/null || true
           tar -xzf ~/moteeva-deploy.tar.gz
@@ -53,4 +56,8 @@ jobs:
           pm2 restart moteeva || pm2 start .svelte-kit/output/server/index.js --name moteeva
           pm2 save
         EOF
+
+    - name: Cleanup
+      if: always()
+      run: rm -f ~/.ssh/deploy_key
 
