@@ -40,11 +40,11 @@ jobs:
 
     - name: Transfer files to server
       run: |
-        scp -P 3000 -o StrictHostKeyChecking=no moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
+        scp -P 3000 -o StrictHostKeyChecking=no moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@185.125.27.88:~/
 
     - name: Deploy on server
       run: |
-        ssh -p 3000 -o StrictHostKeyChecking=no dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'EOF'
+        ssh -p 3000 -o StrictHostKeyChecking=no dS7BhMKpcsV_moteeva@185.125.27.88 << 'EOF'
           cd /srv/customer/apps/moteeva
           rm -rf * .[^.]* 2>/dev/null || true
           tar -xzf ~/moteeva-deploy.tar.gz
