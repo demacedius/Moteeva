@@ -31,7 +31,7 @@ jobs:
 
     - name: Create deployment archive
       run: |
-        tar --exclude='node_modules' --exclude='.git' --exclude='.DS_Store' -czf moteeva-deploy.tar.gz .
+        tar --exclude='node_modules' --exclude='.git' --exclude='.DS_Store' --exclude='*.tar.gz' -czf moteeva-deploy.tar.gz .
 
     - name: Setup SSH
       run: |
