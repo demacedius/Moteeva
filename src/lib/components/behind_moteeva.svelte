@@ -119,7 +119,7 @@
             <div class="flex gap-5">
                 <div class="relative h-[263px] w-[160px] overflow-visible">
                     <img src={tristant_back} alt="" class="absolute w-full h-full" />
-                    <img src={tristan_front} alt="" class="absolute -top-6 w-full" />
+                    <img src={tristan_front} alt="" class="absolute -top-6 w-full h-[107%] " />
                 </div>
                 <div class="relative h-[263px] w-[160px] overflow-visible">
                     <img src={moi_back} alt="" class="absolute w-full h-full" />

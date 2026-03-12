@@ -23,7 +23,15 @@
 
 		<!-- Mobile version -->
 		<div class="flex flex-col lg:hidden items-center">
-			<img src={logoFooter} alt="Moteeva Logo" class="h-12.5 w-auto mb-4" />
+			<div class="relative mb-4 flex justify-center">
+				<!-- Logo avec effet gradient métallique -->
+				<img
+					src={logoFooter}
+					alt="Moteeva Logo"
+					class="h-12.5 w-auto"
+					style="filter: grayscale(0.3) brightness(0.9) contrast(1.1); -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 70%, rgba(255,255,255,0.3) 100%); mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 70%, rgba(255,255,255,0.3) 100%);"
+				/>
+			</div>
 			<div class="flex flex-row items-center justify-center">
 				<ul class="space-y-2 flex gap-[9px]">
 					<li>
@@ -47,7 +55,15 @@
 
 		<!-- Desktop version -->
 		<div class="hidden lg:flex lg:flex-col lg:items-center lg:mb-12">
-			<img src={logoFooter} alt="Moteeva Logo" class="h-32 w-auto mb-12" />
+			<div class="relative mb-12 flex justify-center">
+				<!-- Logo avec effet gradient métallique -->
+				<img
+					src={logoFooter}
+					alt="Moteeva Logo"
+					class="h-32 w-auto"
+					style="filter: grayscale(0.3) brightness(0.9) contrast(1.1); -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 70%, rgba(255,255,255,0.3) 100%); mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 70%, rgba(255,255,255,0.3) 100%);"
+				/>
+			</div>
 			<div class="flex items-center justify-between w-full">
 				<p class="text-[#9CA3B0] text-sm">
 					© {new Date().getFullYear()} Moteeva. Tous droits réservés.

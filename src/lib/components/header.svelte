@@ -22,7 +22,7 @@
         <h1
             class="font-semibold text-[32px] md:text-[48px] lg:text-[56px] leading-[122%] font-archivo mb-6 max-w-full"
         >
-            Et si vous ne manquez plus jamais de motivation
+            Et si vous ne manquiez plus jamais de motivation
             <span class="relative inline-block">
                 <span class="relative z-10 bg-[#f25d1852] px-1 py-0.5 inline-block leading-none">pour faire du sport ?</span>
             </span><span class="inline-block align-top"> </span><img
@@ -41,7 +41,8 @@
         <button
             class="mb-4 flex items-center justify-center shadow-lg text-base text-white font-sans bg-[linear-gradient(46deg,#FF6933,#FF571A)] py-3 px-10 rounded-[10px] h-[50px] leading-[1.2] border-none hover:opacity-90 transition-opacity"
         >
-            Découvrir le projet
+            <a href="https://gofund.me/6351004e5">Soutenir-le-projet</a>
+            
         </button>
 
         <!-- Lien découvrir fonctionnalités -->

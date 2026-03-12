@@ -83,7 +83,7 @@
         {
             title: "Sécurité",
             icon: shield,
-            text: "Profils vérifiés, avis utilisateurs et sessions encadrées par des ambassadeurs.",
+            text: "Profils vérifiés, avis utilisateurs et cadre clair.",
             num: "6",
         },
     ];
@@ -93,9 +93,9 @@
     class="bg-[#F9FAFB] border border-[rgba(0,0,0,0.17)] rounded-[30px] pt-16 lg:pt-20 -mt-[400px] lg:-mt-[650px] w-full max-w-[1620px] mx-auto relative z-20"
 >
     <div class="flex flex-col items-center px-4 sm:px-8 lg:px-12">
-        <div class="flex flex-col lg:flex-row lg:gap-[120px] lg:mb-[200px]">
+        <div class="flex flex-col lg:flex-row lg:items-start lg:gap-42 lg:mb-[200px] w-full xl:gap-72">
             <!-- Left column: Text content (sticky on desktop) -->
-            <div class="lg:flex-1 lg:sticky lg:top-24 lg:self-start">
+            <div class="lg:w-1/2 lg:sticky lg:top-24 lg:self-start lg:pr-8">
                 <div class="mb-6 rounded-full border border-[#22252A] text-[#22252A] inline-block px-5 py-2.5 w-full sm:w-auto lg:max-w-[416px]">
                     <p class="text-sm font-sans leading-[120%] font-normal text-center sm:text-left">
                         La raison n°1 pour laquelle on arrête le sport
@@ -129,7 +129,7 @@
             </div>
 
             <!-- Right column: Comment cards (scrollable on desktop) / Below text (on mobile) -->
-            <div class="flex flex-col gap-4 sm:gap-6 mt-8 sm:mt-12 mb-12 sm:mb-[87px] lg:mt-0">
+            <div class="flex flex-col gap-4 sm:gap-6 mt-8 sm:mt-12 mb-12 sm:mb-[87px] lg:mt-0 ">
                 {#each comments as commentData}
                     <CommentCard
                         avatarSrc={commentData.avatarSrc}
@@ -167,7 +167,7 @@
 
             <!-- Illustration basketball dans une carte blanche séparée - hidden on mobile -->
             <div class="hidden lg:flex bg-white rounded-3xl p-8 lg:p-10 items-center justify-center border-2 border-gray-200 lg:w-[450px] lg:min-h-[450px]">
-                <img src={basketballPlayer} alt="Joueur de basketball" class="w-full h-auto max-w-[300px]" />
+                <img src={basketballPlayer} alt="Joueur de basketball" class="w-full h-auto max-w-[500px]" />
             </div>
         </div>
     </div>
@@ -190,7 +190,7 @@
                 de leurs passions sportives ?
             </p>
         </div>
-        <div class="flex flex-col lg:grid lg:grid-cols-3 gap-y-[38px] gap-x-[48px] w-full lg:w-fit lg:mx-auto">
+        <div class="flex flex-col lg:grid lg:grid-cols-3 gap-y-[48px] gap-x-12 w-full lg:w-fit lg:mx-auto">
             {#each cards as cardsData}
                 <Card
                     title={cardsData.title}

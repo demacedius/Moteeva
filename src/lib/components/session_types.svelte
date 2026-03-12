@@ -11,56 +11,64 @@
     const sessions = [
         {
             title: "Sessions Découverte",
-            description: "Testez un sport qui vous plaît, sans prise de tête",
+            description: "Testez un sport en toute tranquillité.",
+            hoverDescription: "Testez un sport en toute tranquillité.\n\nDes groupes bienveillants, sans pression, pensés pour celles et ceux qui veulent simplement essayer.",
             icon: decouverte,
             bgColor: "#50C878",
             textColor: "#FFFFFF"
         },
         {
             title: "Débutants Bienvenus",
-            description: "Progressez sans stress dans une ambiance inclusive",
+            description: "Un rythme accessible, une ambiance encourageante.",
+            hoverDescription: "Un rythme accessible, une ambiance encourageante.\n\nParfait pour progresser en douceur et pratiquer avec des personnes qui partagent votre état d'esprit.",
             icon: debutant,
             bgColor: "#6EC9E0",
             textColor: "#FFFFFF"
         },
         {
             title: "Sessions Performance",
-            description: "Poussez vos limites lors de sessions intenses",
+            description: "Pour les sportifs qui aiment se dépasser.",
+            hoverDescription: "Pour les sportifs qui aiment se dépasser.\n\nUn niveau homogène, une séance rythmée, et des partenaires motivés.",
             icon: performance,
             bgColor: "#FF6933",
             textColor: "#FFFFFF"
         },
         {
-            title: "Sessions Kids ou Non Mixte",
+            title: "Sessions Mixtes ou Non Mixtes",
             description: "Choisissez le cadre qui vous met en confiance",
+            hoverDescription: "Choisissez un cadre qui vous met en confiance : mixte, réservé aux femmes ou aux hommes selon vos préférences.",
             icon: mixte,
             bgColor: "#9B4DCA",
             textColor: "#FFFFFF"
         },
         {
             title: "Sessions Handi-Friendly",
-            description: "Un cadre adapté pour une pratique en toute sérénité",
+            description: "Des sorties pensées pour inclure les personnes en situation de handicap.",
+            hoverDescription: "Des sorties pensées pour inclure les personnes en situation de handicap : lieu adapté, description claire, et partenaires sensibilisés pour une pratique sereine.",
             icon: handicap,
             bgColor: "#7FC8A9",
             textColor: "#FFFFFF"
         },
         {
             title: "Sessions Senior-Friendly",
-            description: "Maintenez-vous en forme à votre propre rythme",
+            description: "Marche douce, mobilité ou activités légères.",
+            hoverDescription: "Marche douce, mobilité ou activités légères : des sessions conviviales, adaptées au rythme et aux besoins des seniors.",
             icon: senior,
             bgColor: "#8B7BC8",
             textColor: "#FFFFFF"
         },
         {
             title: "Eco session",
-            description: "Pratiquez tout en respectant notre planète",
+            description: "Bougez tout en agissant pour la planète",
+            hoverDescription: "Bougez tout en agissant pour la planète : marche de ramassage, running propre, vélo éco-responsable... un sport qui a du sens.",
             icon: eco,
             bgColor: "#8BC34A",
             textColor: "#FFFFFF"
         },
         {
             title: "Sessions LGBT+ Friendly",
-            description: "Sportez dans un espace safe et inclusif pour la communauté LGBT+",
+            description: "Sessions inclusives, ouvertes à tous, avec un public sensibilisé à la communauté LGBT+.",
+            hoverDescription: "Des sessions inclusives, ouvertes à toutes les identités et orientations, dans des espaces bienveillants et respectueux de la communauté LGBT+ pour pratiquer en toute confiance.",
             icon: lgbt,
             bgColor: "#E91E63",
             textColor: "#FFFFFF"
@@ -80,22 +88,25 @@
 
         <!-- Grille des cartes -->
         <!-- Les 6 premières cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+        <div class="flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 w-full">
             {#each sessions.slice(0, 6) as session}
                 <div
-                    class="rounded-xl py-[21px] px-[31px] flex items-center justify-center shadow-sm w-full lg:w-[350px] h-[116px]"
+                    class="group rounded-xl py-4 px-4 sm:py-[21px] sm:px-[31px] flex items-center justify-center shadow-sm w-full md:max-w-[350px] h-auto min-h-[116px] hover:h-auto hover:items-start transition-all duration-300 ease-in-out cursor-pointer"
                     style="background-color: {session.bgColor};"
                 >
-                    <div class="flex flex-row gap-[10px] items-center w-full">
-                        <div class="bg-white rounded-xl p-3 shrink-0">
+                    <div class="flex flex-row gap-[10px] items-start w-full">
+                        <div class="bg-white rounded-xl p-3 shrink-0 self-start group-hover:hidden">
                             <img src={session.icon} alt={session.title} class="w-8 h-8" />
                         </div>
-                        <div class="flex flex-col">
-                            <h3 class="font-archivo font-bold text-lg leading-[120%]" style="color: {session.textColor};">
+                        <div class="flex flex-col flex-1">
+                            <h3 class="font-archivo font-bold text-lg leading-[120%] mb-1" style="color: {session.textColor};">
                                 {session.title}
                             </h3>
-                            <p class="text-[14px] leading-[140%]" style="color: {session.textColor};">
+                            <p class="text-[14px] leading-[140%] group-hover:hidden" style="color: {session.textColor};">
                                 {session.description}
+                            </p>
+                            <p class="text-[14px] leading-[140%] hidden group-hover:block whitespace-pre-line" style="color: {session.textColor};">
+                                {session.hoverDescription}
                             </p>
                         </div>
                     </div>
@@ -104,22 +115,25 @@
         </div>
 
         <!-- Les 2 dernières cards centrées -->
-        <div class="flex flex-col md:flex-row gap-6 justify-center mb-8">
+        <div class="flex flex-col items-center md:flex-row gap-6 justify-center mb-8 w-full">
             {#each sessions.slice(6) as session}
                 <div
-                    class="rounded-xl py-[21px] px-[31px] flex items-center justify-center shadow-sm w-full lg:w-[350px] h-[116px]"
+                    class="group rounded-xl py-4 px-4 sm:py-[21px] sm:px-[31px] flex items-center justify-center shadow-sm w-full md:max-w-[350px] h-auto min-h-[116px] hover:h-auto hover:items-start transition-all duration-300 ease-in-out cursor-pointer"
                     style="background-color: {session.bgColor};"
                 >
-                    <div class="flex flex-row gap-[10px] items-center w-full">
-                        <div class="bg-white rounded-xl p-3 shrink-0">
+                    <div class="flex flex-row gap-[10px] items-start w-full">
+                        <div class="bg-white rounded-xl p-3 shrink-0 self-start group-hover:hidden">
                             <img src={session.icon} alt={session.title} class="w-8 h-8" />
                         </div>
-                        <div class="flex flex-col">
-                            <h3 class="font-archivo font-bold text-lg leading-[120%]" style="color: {session.textColor};">
+                        <div class="flex flex-col flex-1">
+                            <h3 class="font-archivo font-bold text-lg leading-[120%] mb-1" style="color: {session.textColor};">
                                 {session.title}
                             </h3>
-                            <p class="text-[14px] leading-[140%]" style="color: {session.textColor};">
+                            <p class="text-[14px] leading-[140%] group-hover:hidden" style="color: {session.textColor};">
                                 {session.description}
+                            </p>
+                            <p class="text-[14px] leading-[140%] hidden group-hover:block whitespace-pre-line" style="color: {session.textColor};">
+                                {session.hoverDescription}
                             </p>
                         </div>
                     </div>
