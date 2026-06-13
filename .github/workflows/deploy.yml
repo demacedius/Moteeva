@@ -51,4 +51,4 @@ jobs:
       env:
         SSHPASS: ${{ secrets.SSHPASS }}
       run: |
-        sshpass -e ssh -o StrictHostKeyChecking=no dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com "cd /srv/customer/apps/moteeva && echo 'CD OK' && tar -xzf ~/moteeva-deploy.tar.gz && echo 'TAR OK' && npm ci --production 2>&1 && echo 'NPM OK' && rm ~/moteeva-deploy.tar.gz && echo 'Done'"
+        sshpass -e ssh -tt -o StrictHostKeyChecking=no dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com "cd /srv/customer/apps/moteeva && tar -xzf ~/moteeva-deploy.tar.gz && npm ci --production && rm ~/moteeva-deploy.tar.gz && echo '✅ Done'"
