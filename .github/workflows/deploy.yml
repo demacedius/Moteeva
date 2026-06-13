@@ -51,10 +51,4 @@ jobs:
       env:
         SSHPASS: ${{ secrets.SSHPASS }}
       run: |
-        sshpass -e ssh dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'EOF'
-          cd /srv/customer/apps/moteeva
-          tar -xzf ~/moteeva-deploy.tar.gz
-          npm ci --production
-          rm ~/moteeva-deploy.tar.gz
-          echo "✅ Déploiement terminé"
-        EOF
+        sshpass -e ssh -o StrictHostKeyChecking=no dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com "cd /srv/customer/apps/moteeva && tar -xzf ~/moteeva-deploy.tar.gz && npm ci --production && rm ~/moteeva-deploy.tar.gz && echo '✅ Déploiement terminé'"
