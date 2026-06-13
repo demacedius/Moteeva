@@ -1,5 +1,5 @@
 <script>
-	import logoFooter from '$lib/assets/images/logoFooter.png';
+	import logoFooter from '$lib/assets/images/logoFooter.png?enhanced';
 	import Icon from '@iconify/svelte';
 </script>
 
@@ -25,10 +25,11 @@
 		<div class="flex flex-col lg:hidden items-center">
 			<div class="relative mb-4 flex justify-center">
 				<!-- Logo avec effet gradient métallique -->
-				<img
+				<enhanced:img
 					src={logoFooter}
 					alt="Moteeva Logo"
 					class="h-12.5 w-auto"
+					loading="lazy"
 					style="filter: grayscale(0.3) brightness(0.9) contrast(1.1); -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 70%, rgba(255,255,255,0.3) 100%); mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 70%, rgba(255,255,255,0.3) 100%);"
 				/>
 			</div>
@@ -57,10 +58,11 @@
 		<div class="hidden lg:flex lg:flex-col lg:items-center lg:mb-12">
 			<div class="relative mb-12 flex justify-center">
 				<!-- Logo avec effet gradient métallique -->
-				<img
+				<enhanced:img
 					src={logoFooter}
 					alt="Moteeva Logo"
 					class="h-32 w-auto"
+					loading="lazy"
 					style="filter: grayscale(0.3) brightness(0.9) contrast(1.1); -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 70%, rgba(255,255,255,0.3) 100%); mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 70%, rgba(255,255,255,0.3) 100%);"
 				/>
 			</div>

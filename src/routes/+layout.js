@@ -1,2 +1,1 @@
-// Disable server-side rendering
-export const ssr = false;
+export const ssr = true;

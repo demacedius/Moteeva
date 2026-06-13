@@ -1,12 +1,12 @@
 <script>
     import CommentCard from "./commentCard.svelte";
     import Card from "./card.svelte";
-    import Lucas from "$lib/assets/images/Lucas.png";
-    import Sarah from "$lib/assets/images/Sarah.png";
-    import Mehdi from "$lib/assets/images/Mehdi.png";
-    import Marie from "$lib/assets/images/Marie.png";
-    import Julien from "$lib/assets/images/Julien.png";
-    import basketballPlayer from "$lib/assets/images/Gemini_Generated_Image_6u4ge26u4ge26u4g (1) 1.png";
+    import Lucas from "$lib/assets/images/Lucas.png?enhanced";
+    import Sarah from "$lib/assets/images/Sarah.png?enhanced";
+    import Mehdi from "$lib/assets/images/Mehdi.png?enhanced";
+    import Marie from "$lib/assets/images/Marie.png?enhanced";
+    import Julien from "$lib/assets/images/Julien.png?enhanced";
+    import basketballPlayer from "$lib/assets/images/Gemini_Generated_Image_6u4ge26u4ge26u4g (1) 1.png?enhanced";
     import courbe from "$lib/assets/images/courbe.png";
     import map from "$lib/assets/images/map.svg";
     import calendar from "$lib/assets/images/calendar.svg";
@@ -93,7 +93,7 @@
     class="bg-[#F9FAFB] border border-[rgba(0,0,0,0.17)] rounded-[30px] pt-16 lg:pt-20 -mt-[400px] lg:-mt-[650px] w-full max-w-[1620px] mx-auto relative z-20"
 >
     <div class="flex flex-col items-center px-4 sm:px-8 lg:px-12">
-        <div class="flex flex-col lg:flex-row lg:items-start lg:gap-42 lg:mb-[200px] w-full xl:gap-72">
+        <div class="flex flex-col lg:flex-row lg:items-start lg:gap-42 lg:mb-[60px] w-full xl:gap-72">
             <!-- Left column: Text content (sticky on desktop) -->
             <div class="lg:w-1/2 lg:sticky lg:top-24 lg:self-start lg:pr-8">
                 <div class="mb-6 rounded-full border border-[#22252A] text-[#22252A] inline-block px-5 py-2.5 w-full sm:w-auto lg:max-w-[416px]">
@@ -167,7 +167,7 @@
 
             <!-- Illustration basketball dans une carte blanche séparée - hidden on mobile -->
             <div class="hidden lg:flex bg-white rounded-3xl p-8 lg:p-10 items-center justify-center border-2 border-gray-200 lg:w-[450px] lg:min-h-[450px]">
-                <img src={basketballPlayer} alt="Joueur de basketball" class="w-full h-auto max-w-[500px]" />
+                <enhanced:img src={basketballPlayer} alt="Joueur de basketball" class="w-full h-auto max-w-[500px]" loading="lazy" />
             </div>
         </div>
     </div>

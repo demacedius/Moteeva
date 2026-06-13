@@ -1,10 +1,10 @@
 <script>
-    import front from "$lib/assets/images/front.png";
-    import back from "$lib/assets/images/back.png";
-    import tristan_front from "$lib/assets/images/tristant_front.png";
-    import tristant_back from "$lib/assets/images/tristan_back.png";
-    import moi_front from "$lib/assets/images/moi_front.png";
-    import moi_back from "$lib/assets/images/moi_back.png";
+    import front from "$lib/assets/images/front.png?enhanced";
+    import back from "$lib/assets/images/back.png?enhanced";
+    import tristan_front from "$lib/assets/images/tristant_front.png?enhanced";
+    import tristant_back from "$lib/assets/images/tristan_back.png?enhanced";
+    import moi_front from "$lib/assets/images/moi_front.png?enhanced";
+    import moi_back from "$lib/assets/images/moi_back.png?enhanced";
     import Acordion from "./acordion.svelte";
     import heart from "$lib/assets/images/heart.png";
 
@@ -56,15 +56,17 @@
     <div class="lg:hidden">
         <div class="flex justify-center">
             <div class="h-[551.86px] w-[336.09px] relative overflow-visible">
-                <img
+                <enhanced:img
                 src={back}
                 alt=""
                 class="absolute w-full h-full top-0 left-0 z-0"
+                loading="lazy"
                 />
-                <img
+                <enhanced:img
                 src={front}
                 alt=""
                 class="absolute w-[115%] h-auto max-w-none top-8 -left-6 z-10"
+                loading="lazy"
                 />
             </div>
         </div>
@@ -82,15 +84,17 @@
             <!-- Left: Image with same style as mobile -->
             <div class="flex items-start justify-start">
                 <div class="relative h-[551.86px] w-[336.09px] overflow-visible">
-                    <img
+                    <enhanced:img
                     src={back}
                     alt=""
                     class="absolute w-full h-full top-0 left-0 z-0"
+                    loading="lazy"
                     />
-                    <img
+                    <enhanced:img
                     src={front}
                     alt=""
                     class="absolute w-[115%] h-auto max-w-none top-8 -left-6 z-10"
+                    loading="lazy"
                     />
                 </div>
             </div>
@@ -118,12 +122,12 @@
         <div class="flex justify-center">
             <div class="flex gap-5">
                 <div class="relative h-[263px] w-[160px] overflow-visible">
-                    <img src={tristant_back} alt="" class="absolute w-full h-full" />
-                    <img src={tristan_front} alt="" class="absolute -top-6 w-full h-[107%] " />
+                    <enhanced:img src={tristant_back} alt="" class="absolute w-full h-full" loading="lazy" />
+                    <enhanced:img src={tristan_front} alt="" class="absolute -top-6 w-full h-[107%]" loading="lazy" />
                 </div>
                 <div class="relative h-[263px] w-[160px] overflow-visible">
-                    <img src={moi_back} alt="" class="absolute w-full h-full" />
-                    <img src={moi_front} alt="" class="absolute -top-6 w-full" />
+                    <enhanced:img src={moi_back} alt="" class="absolute w-full h-full" loading="lazy" />
+                    <enhanced:img src={moi_front} alt="" class="absolute -top-6 w-full" loading="lazy" />
                 </div>
             </div>
         </div>
@@ -146,8 +150,8 @@
             <!-- Right: Anthony image -->
             <div class="flex items-center justify-center">
                 <div class="relative h-[350px] w-[220px] overflow-visible">
-                    <img src={moi_back} alt="" class="absolute w-full h-full top-0 left-0" />
-                    <img src={moi_front} alt="" class="absolute w-[110%] h-auto max-w-none -top-[37.5px] -left-3" />
+                    <enhanced:img src={moi_back} alt="" class="absolute w-full h-full top-0 left-0" loading="lazy" />
+                    <enhanced:img src={moi_front} alt="" class="absolute w-[110%] h-auto max-w-none -top-[37.5px] -left-3" loading="lazy" />
                 </div>
             </div>
         </div>
@@ -157,8 +161,8 @@
             <!-- Left: Tristan image -->
             <div class="flex items-center justify-start">
                 <div class="relative h-[350px] w-[220px] overflow-visible">
-                    <img src={tristant_back} alt="" class="absolute w-full h-full top-0 left-0" />
-                    <img src={tristan_front} alt="" class="absolute w-[110%] h-auto max-w-none -top-9 -left-[15px]" />
+                    <enhanced:img src={tristant_back} alt="" class="absolute w-full h-full top-0 left-0" loading="lazy" />
+                    <enhanced:img src={tristan_front} alt="" class="absolute w-[110%] h-auto max-w-none -top-9 -left-[15px]" loading="lazy" />
                 </div>
             </div>
 

@@ -1,5 +1,5 @@
 <script>
-    import Logo from "$lib/assets/images/Frame28.png";
+    import Logo from "$lib/assets/images/Frame28.png?enhanced";
     
 </script>
 
@@ -7,7 +7,7 @@
     class="w-full h-[73px] flex items-center justify-center lg:justify-between "
 >
     <a href="/" class="cursor-pointer">
-        <img src={Logo} alt="Moteeva" class="w-[220px] " />
+        <enhanced:img src={Logo} alt="Moteeva" class="w-[220px]" fetchpriority="high" />
     </a>
     <div class="hidden w-full lg:flex lg:items-center lg:justify-between lg:ml-8 xl:ml-[281px]">
         <ul class="flex font-sans leading-[120%] tracking-[-2%] gap-4 xl:gap-18 text-base lg:text-base xl:text-lg 2xl:text-xl">

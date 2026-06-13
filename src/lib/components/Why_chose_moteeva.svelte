@@ -1,13 +1,13 @@
 <script>
     import Tag from "$lib/components/tag.svelte";
-    import phone from "$lib/assets/images/phone.png";
-    import logo from "$lib/assets/images/Group 51.svg";
-    import vector41 from "$lib/assets/images/Vector 41.png";
-    import vector42 from "$lib/assets/images/Vector 42.png";
-    import vector43 from "$lib/assets/images/Vector 43.png";
-    import vector44 from "$lib/assets/images/Vector 44.png";
-    import vector45 from "$lib/assets/images/Vector 45.png";
-    import vector46 from "$lib/assets/images/Vector 46.png";
+    import phone from "$lib/assets/images/phone.png?enhanced";
+    import logo from "$lib/assets/images/Group 51.svg?enhanced";
+    import vector41 from "$lib/assets/images/Vector 41.png?enhanced";
+    import vector42 from "$lib/assets/images/Vector 42.png?enhanced";
+    import vector43 from "$lib/assets/images/Vector 43.png?enhanced";
+    import vector44 from "$lib/assets/images/Vector 44.png?enhanced";
+    import vector45 from "$lib/assets/images/Vector 45.png?enhanced";
+    import vector46 from "$lib/assets/images/Vector 46.png?enhanced";
     const badges = [
         {
             text: "Rejoignez des séances variées et progressez plus vite",
@@ -48,10 +48,11 @@
     <!-- Conteneur externe pour la position relative -->
     <div class="relative w-[1101px] mx-auto lg:mt-20 overflow-visible">
         <!-- Image du téléphone, en arrière-plan (z-10) -->
-        <img
+        <enhanced:img
             src={phone}
             alt="Téléphone Moteeva"
             class="hidden lg:block absolute top-[-48px] right-[26.8px] h-[430px] w-auto z-30 pointer-events-none"
+            loading="lazy"
         />
 
         <!-- Carte de contenu, au premier plan (z-20), avec la bordure et le fond -->
@@ -107,29 +108,29 @@
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
             <div class="relative flex items-center justify-center rotate-[0.731deg]">
                 <div class="lg:w-[90px] lg:h-[90px] xl:w-[105px] xl:h-[105px] 2xl:w-[122px] 2xl:h-[122px] rounded-[30px] bg-white border-[1.7px] border-[#F1F1F1] shadow-[0px_0px_250px_0px_rgba(0,0,0,0.25)] flex items-center justify-center">
-                    <img src={logo} alt="Moteeva Logo" class="lg:w-[50px] xl:w-[60px] 2xl:w-[69px] h-auto" />
+                    <enhanced:img src={logo} alt="Moteeva Logo" class="lg:w-[50px] xl:w-[60px] 2xl:w-[69px] h-auto" loading="lazy" />
                 </div>
             </div>
         </div>
 
         <!-- Chemins courbes en PNG (z-index: 5 entre le fond et les badges/cartes) -->
         <!-- Vector 41: du logo central vers badge top "Rejoignez des séances" -->
-        <img src={vector41} alt="" class="absolute lg:w-[130px] lg:h-[36px] xl:w-[150px] xl:h-[41px] 2xl:w-[168px] 2xl:h-[46px]" style="top: 32%; left: 59%; transform: translateX(-50%); z-index: 5; pointer-events: none; " />
+        <enhanced:img src={vector41} alt="" class="absolute lg:w-[130px] lg:h-[36px] xl:w-[150px] xl:h-[41px] 2xl:w-[168px] 2xl:h-[46px]" style="top: 32%; left: 59%; transform: translateX(-50%); z-index: 5; pointer-events: none;" loading="lazy" />
 
         <!-- Vector 46: du logo central vers carte top-left "Créer du lien social" -->
-        <img src={vector46} alt="" class="absolute lg:w-[106px] lg:h-[62px] xl:w-[120px] xl:h-[70px] 2xl:w-[136px] 2xl:h-[80px]" style="top: 28%; left: 35%; z-index: 5; pointer-events: none; " />
+        <enhanced:img src={vector46} alt="" class="absolute lg:w-[106px] lg:h-[62px] xl:w-[120px] xl:h-[70px] 2xl:w-[136px] 2xl:h-[80px]" style="top: 28%; left: 35%; z-index: 5; pointer-events: none;" loading="lazy" />
 
         <!-- Vector 42: du logo central vers carte top-right "Une progression accélérée" -->
-        <img src={vector42} alt="" class="absolute lg:w-[155px] lg:h-[15px] xl:w-[175px] xl:h-[17px] 2xl:w-[200px] 2xl:h-[20px]" style="top: 50%; right: 28%; z-index: 5; pointer-events: none; " />
+        <enhanced:img src={vector42} alt="" class="absolute lg:w-[155px] lg:h-[15px] xl:w-[175px] xl:h-[17px] 2xl:w-[200px] 2xl:h-[20px]" style="top: 50%; right: 28%; z-index: 5; pointer-events: none;" loading="lazy" />
 
         <!-- Vector 45: du logo central vers badge left "Allez plus loin" -->
-        <img src={vector45} alt="" class="absolute lg:w-[165px] lg:h-[94px] xl:w-[188px] xl:h-[107px] 2xl:w-[212px] 2xl:h-[121px]" style="top: 52%; left: 28%; z-index: 5; pointer-events: none; " />
+        <enhanced:img src={vector45} alt="" class="absolute lg:w-[165px] lg:h-[94px] xl:w-[188px] xl:h-[107px] 2xl:w-[212px] 2xl:h-[121px]" style="top: 52%; left: 28%; z-index: 5; pointer-events: none;" loading="lazy" />
 
         <!-- Vector 43: du logo central vers badge right "Découvrez de nouveaux sports" -->
-        <img src={vector43} alt="" class="absolute lg:w-[127px] lg:h-[116px] xl:w-[145px] xl:h-[132px] 2xl:w-[164px] 2xl:h-[149px]" style="top: 65%; right: 35%; z-index: 5; pointer-events: none; " />
+        <enhanced:img src={vector43} alt="" class="absolute lg:w-[127px] lg:h-[116px] xl:w-[145px] xl:h-[132px] 2xl:w-[164px] 2xl:h-[149px]" style="top: 65%; right: 35%; z-index: 5; pointer-events: none;" loading="lazy" />
 
         <!-- Vector 44: du logo central vers carte bottom "Plus d'excuses" -->
-        <img src={vector44} alt="" class="absolute lg:w-[65px] lg:h-[61px] xl:w-[74px] xl:h-[70px] 2xl:w-[84px] 2xl:h-[79px]" style="top: 65%; left: 46%; transform: translateX(-50%); z-index: 5; pointer-events: none;" />
+        <enhanced:img src={vector44} alt="" class="absolute lg:w-[65px] lg:h-[61px] xl:w-[74px] xl:h-[70px] 2xl:w-[84px] 2xl:h-[79px]" style="top: 65%; left: 46%; transform: translateX(-50%); z-index: 5; pointer-events: none;" loading="lazy" />
 
         <!-- Badge orange: "Rejoignez des séances variées..." (en haut) -->
         <div class="absolute lg:top-[20%] xl:top-[21%] 2xl:top-[22%] lg:left-[58%] xl:left-[59%] 2xl:left-[60%] px-2.5 transform -translate-x-1/2 rotate-[-1.343deg] z-10">
