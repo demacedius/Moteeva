@@ -128,8 +128,8 @@
                 </div>
             </div>
 
-            <!-- Right column: Comment cards (scrollable on desktop) / Horizontal scroll on mobile -->
-            <div class="flex flex-row lg:flex-col gap-4 sm:gap-6 mt-8 sm:mt-12 mb-12 sm:mb-[87px] lg:mt-0 overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none pb-4 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0">
+            <!-- Right column: Comment cards (vertical scroll on mobile, normal on desktop) -->
+            <div class="flex flex-col gap-4 sm:gap-6 mt-8 sm:mt-12 mb-12 sm:mb-[87px] lg:mt-0 max-h-[420px] overflow-y-auto lg:max-h-none lg:overflow-y-visible">
                 {#each comments as commentData}
                     <CommentCard
                         avatarSrc={commentData.avatarSrc}
