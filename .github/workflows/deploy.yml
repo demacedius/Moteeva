@@ -43,13 +43,13 @@ jobs:
 
     - name: Transfer files to server
       env:
-        SSHPASS: ${{ secrets.SSH_PASSWORD }}
+        SSHPASS: ${{ secrets.SSHPASS }}
       run: |
         sshpass -e scp moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
 
     - name: Deploy on server
       env:
-        SSHPASS: ${{ secrets.SSH_PASSWORD }}
+        SSHPASS: ${{ secrets.SSHPASS }}
       run: |
         sshpass -e ssh dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'EOF'
           cd /srv/customer/apps/moteeva
