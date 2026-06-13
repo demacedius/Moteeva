@@ -18,16 +18,18 @@ tar --exclude='node_modules' --exclude='.svelte-kit' --exclude='.DS_Store' -czf 
 
 # 3. Transfert vers le serveur
 echo "📤 Transfert vers le serveur..."
-scp moteeva-sources.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
+scp -i ~/.ssh/github_actions_moteeva moteeva-sources.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
 
 # 4. Déploiement sur le serveur
 echo "🔧 Déploiement sur le serveur..."
-ssh dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'ENDSSH'
+ssh -i ~/.ssh/github_actions_moteeva dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'ENDSSH'
 cd /srv/customer/apps/moteeva
 tar -xzf ~/moteeva-sources.tar.gz
 npm install
 npx svelte-kit sync
 npm run build
+pm2 restart moteeva || pm2 start build/index.js --name moteeva
+pm2 save
 echo "✅ Build terminé sur le serveur"
 ENDSSH
 
