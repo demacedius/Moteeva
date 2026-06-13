@@ -93,7 +93,7 @@
     class="bg-[#F9FAFB] border border-[rgba(0,0,0,0.17)] rounded-[30px] pt-16 lg:pt-20 -mt-[400px] lg:-mt-[650px] w-full max-w-[1620px] mx-auto relative z-20"
 >
     <div class="flex flex-col items-center px-4 sm:px-8 lg:px-12">
-        <div class="flex flex-col lg:flex-row lg:items-start lg:gap-42 lg:mb-[60px] w-full xl:gap-72">
+        <div class="flex flex-col lg:flex-row lg:items-start lg:gap-42 lg:mb-[30px] w-full xl:gap-72">
             <!-- Left column: Text content (sticky on desktop) -->
             <div class="lg:w-1/2 lg:sticky lg:top-24 lg:self-start lg:pr-8">
                 <div class="mb-6 rounded-full border border-[#22252A] text-[#22252A] inline-block px-5 py-2.5 w-full sm:w-auto lg:max-w-[416px]">
@@ -129,7 +129,7 @@
             </div>
 
             <!-- Right column: Comment cards (vertical scroll on mobile, normal on desktop) -->
-            <div class="flex flex-col gap-4 sm:gap-6 mt-8 sm:mt-12 mb-12 sm:mb-[87px] lg:mt-0 max-h-[420px] overflow-y-auto lg:max-h-none lg:overflow-y-visible">
+            <div class="flex flex-col gap-4 sm:gap-6 mt-8 sm:mt-12 mb-12 sm:mb-[40px] lg:mb-0 lg:mt-0 max-h-[420px] overflow-y-auto lg:max-h-none lg:overflow-y-visible">
                 {#each comments as commentData}
                     <CommentCard
                         avatarSrc={commentData.avatarSrc}
