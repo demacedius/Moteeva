@@ -31,28 +31,28 @@ jobs:
 
     - name: Create deployment archive
       run: |
-        tar --exclude='node_modules' --exclude='.git' --exclude='.DS_Store' --exclude='*.tar.gz' --exclude='.github' -czf moteeva-deploy.tar.gz . || ([ $? -eq 1 ] && exit 0 || exit $?)
+        tar --exclude='node_modules' --exclude='.git' --exclude='.DS_Store' --exclude='*.tar.gz' --exclude='.github' --exclude='.svelte-kit' -czf moteeva-deploy.tar.gz build package.json package-lock.json
 
-    - name: Setup SSH agent
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Install sshpass
+      run: sudo apt-get install -y sshpass
 
     - name: Add server to known hosts
       run: ssh-keyscan -H 57-105796.ssh.hosting-ik.com >> ~/.ssh/known_hosts
 
     - name: Transfer files to server
+      env:
+        SSHPASS: ${{ secrets.SSH_PASSWORD }}
       run: |
-        scp moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
+        sshpass -e scp moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
 
     - name: Deploy on server
+      env:
+        SSHPASS: ${{ secrets.SSH_PASSWORD }}
       run: |
-        ssh dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'EOF'
+        sshpass -e ssh dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com << 'EOF'
           cd /srv/customer/apps/moteeva
-          rm -rf * .[^.]* 2>/dev/null || true
           tar -xzf ~/moteeva-deploy.tar.gz
-          rm ~/moteeva-deploy.tar.gz
           npm ci --production
-          pm2 restart moteeva || pm2 start .svelte-kit/output/server/index.js --name moteeva
-          pm2 save
+          rm ~/moteeva-deploy.tar.gz
+          echo "✅ Déploiement terminé"
         EOF
