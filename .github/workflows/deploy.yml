@@ -37,7 +37,9 @@ jobs:
       run: sudo apt-get install -y sshpass
 
     - name: Add server to known hosts
-      run: ssh-keyscan -H 57-105796.ssh.hosting-ik.com >> ~/.ssh/known_hosts
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -H 57-105796.ssh.hosting-ik.com >> ~/.ssh/known_hosts
 
     - name: Transfer files to server
       env:
