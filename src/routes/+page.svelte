@@ -11,7 +11,7 @@
     import Footer from "$lib/components/footer.svelte";
 </script>
 
-<main class="md:max-w-[1620px] mx-auto px-4 sm:px-[21px] overflow-x-hidden max-w-full">
+<main class="md:max-w-[1620px] mx-auto px-4 sm:px-[21px] overflow-x-clip max-w-full">
     <NavBar/>
 </main>
 
@@ -23,7 +23,7 @@
     <Why/>
 </div>
 
-<main class="md:max-w-[1620px] mx-auto px-4 sm:px-[21px] overflow-x-hidden max-w-full">
+<main class="md:max-w-[1620px] mx-auto px-4 sm:px-[21px] overflow-x-clip max-w-full">
     <div id="publiez-et-trouvez">
         <PublishFind/>
     </div>
@@ -33,7 +33,7 @@
     <SessionTypes/>
 </div>
 
-<main class="md:max-w-[1620px] mx-auto px-4 sm:px-[21px] overflow-x-hidden max-w-full">
+<main class="md:max-w-[1620px] mx-auto px-4 sm:px-[21px] overflow-x-clip max-w-full">
     <div id="pourquoi-choisir">
         <WhyChoose/>
     </div>
