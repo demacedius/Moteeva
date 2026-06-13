@@ -29,10 +29,6 @@ jobs:
     - name: Build application
       run: npm run build
 
-    - name: Create deployment archive
-      run: |
-        tar --exclude='node_modules' --exclude='.git' --exclude='.DS_Store' --exclude='*.tar.gz' --exclude='.github' --exclude='.svelte-kit' -czf moteeva-deploy.tar.gz build package.json package-lock.json
-
     - name: Install sshpass
       run: sudo apt-get install -y sshpass
 
@@ -41,14 +37,10 @@ jobs:
         mkdir -p ~/.ssh
         ssh-keyscan -H 57-105796.ssh.hosting-ik.com >> ~/.ssh/known_hosts
 
-    - name: Transfer files to server
+    - name: Upload build to server
       env:
         SSHPASS: ${{ secrets.SSHPASS }}
       run: |
-        sshpass -e scp moteeva-deploy.tar.gz dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/
-
-    - name: Deploy on server
-      env:
-        SSHPASS: ${{ secrets.SSHPASS }}
-      run: |
-        sshpass -e ssh -tt -o StrictHostKeyChecking=no dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com "cd /srv/customer/apps/moteeva && tar -xzf ~/moteeva-deploy.tar.gz && npm ci --production && rm ~/moteeva-deploy.tar.gz && echo '✅ Done'"
+        sshpass -e scp -r build/ dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/apps/moteeva/
+        sshpass -e scp package.json package-lock.json dS7BhMKpcsV_moteeva@57-105796.ssh.hosting-ik.com:~/apps/moteeva/
+        echo "✅ Build uploadé — redémarre l'app dans le panel Infomaniak"
